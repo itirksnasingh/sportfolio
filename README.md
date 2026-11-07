@@ -45,7 +45,24 @@ The project will be developed through explicit baselines, documented implementat
 The following diagram represents the **planned** system flow, not a claim that every component is already implemented.
 
 ```mermaid
-flowchart TD\n A[Uploaded video] --> B[Frame extraction]\n B --> C[Pose landmark model]\n C --> D[Landmark visibility and confidence checks]\n D --> E[2D joint-angle calculations]\n E --> F[Movement timeline and visual overlay]\n F --> G[Rule-based educational feedback]\n G --> H[Evaluation and limitations report]
+
+flowchart TD
+    A["User video or camera input"] --> B["Video frame extraction"]
+    B --> C["Image preprocessing"]
+    C --> D["Pose estimation using MediaPipe"]
+    D --> E["Human body landmarks"]
+    E --> F["Joint angle calculation"]
+    F --> G["Movement phase detection"]
+    G --> H["Movement feature analysis"]
+    H --> I["Rule-based movement feedback"]
+    E --> J["Pose landmark visualization"]
+    F --> K["Joint angle visualization"]
+    I --> L["Movement analysis dashboard"]
+    J --> L
+    K --> L
+    L --> M["Educational performance insights"]
+    M --> N["Evaluation under controlled conditions"]
+
 ```
 
 ## Evaluation strategy
